@@ -6,6 +6,99 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link rel="icon" href="<%= BASE_URL %>favicon.ico">
     <title><%= htmlWebpackPlugin.options.title %></title>
+      <style>
+          @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700");
+          * {
+              margin: 0;
+              font-family: "Open Sans", sans-serif;
+              box-sizing: border-box;
+          }
+
+          body {
+              width: 100%;
+              min-height: 100vh;
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items: center;
+          }
+
+          h1 {
+              margin-top: 1rem;
+              margin-bottom: 1rem;
+          }
+
+          h3 {
+              text-transform: capitalize;
+          }
+
+          p {
+              line-height: 1.5;
+          }
+
+          .cards {
+              max-width: 100%;
+              display: grid;
+              grid-template-columns: 1fr 1fr 1fr;
+              column-gap: 2rem;
+              row-gap: 2rem;
+              grid-auto-flow: dense;
+              align-items: start;
+          }
+          .cards .card {
+              margin: 0 auto;
+              max-width: 320px;
+              height: fit-content;
+              box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+              border-radius: 8px;
+          }
+          .cards .card:hover {
+              cursor: pointer;
+              box-shadow: 0px 2px 16px rgba(0, 0, 0, 0.2);
+          }
+          .cards .card:hover .card-header h3 {
+              transition: color 0.3s;
+              color: royalblue;
+          }
+          .cards .card .card-hero img {
+              width: 25%;
+              border-top-left-radius: 8px;
+              border-top-right-radius: 8px;
+          }
+          .cards .card .card-header {
+              padding: 8px 16px;
+          }
+          .cards .card .card-body {
+              padding: 8px 16px;
+          }
+
+          @media only screen and (max-width: 1100px) {
+              .cards .card {
+                  max-width: 280px;
+              }
+          }
+          @media only screen and (max-width: 920px) {
+              .cards {
+                  margin-top: 1rem;
+                  margin-bottom: 2rem;
+                  grid-template-columns: 1fr;
+              }
+              .cards .card {
+                  max-width: 400px;
+              }
+          }
+          @media only screen and (max-width: 500px) {
+              .cards {
+                  margin-top: 1rem;
+                  margin-bottom: 2rem;
+                  grid-template-columns: 1fr;
+              }
+              .cards .card {
+                  max-width: 320px;
+              }
+          }
+
+      </style>
   </head>
   <body>
     <noscript>
